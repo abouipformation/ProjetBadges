@@ -1,0 +1,9 @@
+.navbar-custom {
+    color: #FFFFFF;
+    background-color: #0000FF;
+}
+
+#navbar ul li a {
+    color: #FFF;
+    display: block;
+}

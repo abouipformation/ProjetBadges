@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-sm-8 well col-sm-offset-2">
+        {{ form_start(form_annonce, {'attr': {'class': 'form-horizontal'}}) }}
+            <div class="form-group">
+                <div class="col-sm-3">
+                    {{ form_label(form_annonce.articleCategory, 'Category', {'label_attr': {'class': ''}})  }}
+                </div>
+                <div class="col-sm-8">
+                    {{ form_widget(form_annonce.articleCategory, {'attr': {'class': 'form-control'}})  }}
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3">
+                    {{ form_label(form_annonce.categoryTypeAnnonce, 'Type Annonce', {'label_attr': {'class': ''}})  }}
+                </div>
+                <div class="col-sm-8">
+                    {{ form_widget(form_annonce.categoryTypeAnnonce, {'attr': {'class': 'form-control'}})  }}
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3">
+                    {{ form_label(form_annonce.title, 'Title', {'label_attr': {'class': ''}})  }}
+                </div>
+                <div class="col-sm-8">
+                    {{ form_widget(form_annonce.title, {'attr': {'class': 'form-control'}})  }}
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3">
+                    {{ form_label(form_annonce.description, 'Description', {'label_attr': {'class': ''}})  }}
+                </div>
+                <div class="col-sm-8">
+                    {{ form_widget(form_annonce.description, {'attr': {'class': 'form-control'}})  }}
+                </div>
+            </div>
+        <div class="form-group">
+            <div class="col-sm-3">
+                {{ form_label(form_annonce.price, 'price', {'label_attr': {'class': ''}})  }}
+            </div>
+            <div class="col-sm-8">
+                {{ form_widget(form_annonce.price, {'attr': {'class': 'form-control'}})  }}
+            </div>
+        </div>
+        {{ form_row(form_annonce._token) }}
+        <div class="form-group">
+            <div class="col-sm-8">
+                <button type="submit" name="bt-submit">Valider</button>
+            </div>
+        </div>
+       {{ form_end(form_annonce, {render_rest: false}) }}
+
+    </div>
+{% endblock %}
